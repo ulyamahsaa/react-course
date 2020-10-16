@@ -1,3 +1,171 @@
 .App {
   text-align: center;
+  background-color: beige;
+}
+
+.header {
+  margin: auto;
+  background-color: rgb(216, 199, 250);
+  text-align: center;
+}
+
+.menu {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px 3px 20px;
+}
+
+.menu p {
+  font-size: larger;
+  font-family: 'Book Antiqua';
+}
+
+#brand-name {
+  font-family: 'Sofia';
+  font-style: italic;
+  display: inline-block;
+  padding: 5px 20px 3px 20px;
+}
+
+/* Home */
+
+.pageHome-img1 {
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: white;
+}
+
+.content {
+  /* background: linear-gradient(
+    rgb(216, 199, 250) 0%,
+    rgb(216, 199, 250) 30%,
+    beige 30%,
+    beige 100%
+  ); */
+  background-color: rgb(216, 199, 250);
+  height: 30vh;
+  padding: 1% 5% 2% 5%;
+  padding-bottom: 5%;
+  /* text-align: center; */
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 50%;
+  border-radius: 20px;
+  margin: auto;
+  background-color: white;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  text-align: center;
+  padding: 2px 16px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+#card-name {
+  font-family: 'Abril Fatface';
+}
+
+#card-work {
+  font-size: x-large;
+  font-family: monospace;
+}
+
+#title1 {
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+#title1::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  bottom: 0;
+  left: 25%;
+  border-bottom: 5px solid plum;
+}
+
+#title1:hover {
+  cursor: pointer;
+  color: plum;
+  text-shadow: 2px 2px black;
+}
+
+.aboutMe {
+  background-color: beige;
+  border-radius: 20px;
+  margin-top: 2%;
+  padding: 3% 5%;
+}
+
+#deskripsi1 {
+  font-size: larger;
+}
+
+/* Edu */
+.edu-content {
+  object-fit: cover;
+  display: inline-block;
+  padding: 2% 0% 3% 8%;
+  /* margin: auto; */
+  border-radius: 20px;
+}
+
+.eduText {
+  text-align: center;
+}
+
+.eduText p {
+  font-size: x-large;
+}
+
+/* Exp */
+.cardExp {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 70%;
+  border-radius: 20px;
+  margin: auto;
+  padding: 1% 2%;
+  background-color: beige;
+}
+
+.cardExp h1 {
+  /* text-align: center; */
+  font-family: 'Abril Fatface';
+  padding-left: 3%;
+}
+
+.garisExp {
+  background-color: plum;
+  height: 8px;
+  width: 30%;
+  margin-top: -1.5%;
+  margin-left: -3%;
+}
+
+.expContent {
+  padding-left: 3%;
+}
+
+.expContent p li {
+  padding-left: 5%;
+  font-size: larger;
+}
+
+.expContent ul p {
+  font-size: x-large;
+  margin-top: -1%;
+  margin-bottom: -0.8%;
 }
