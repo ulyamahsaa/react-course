@@ -1,17 +1,39 @@
-import React from 'react';
-import { ulya } from '../assets';
+import React, { useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Contact from './contact';
 
 const Home = () => {
+  const [count, setCount] = useState(0);
+
   return (
     <>
-      <div className="content">
-        <div className="card">
-          <img className="pageHome-img1" src={ulya} alt="background1" />
-          <div className="container">
-            <h1 id="card-name">Ulya Mahsa Anandiwa</h1>
-            <p id="card-work">FrontEnd Developer</p>
+      <div id="section1">
+        <div className="content">
+          <p id="hello">Hello</p>
+          <h2>My name is Ulya</h2>
+          <p>Frontend Web Developer</p>
+          <div id="btn-AboutMe">
+            <a href="#section2">More About Me</a>
+          </div>
+          <div>
+            <p>
+              You clicked
+              {count}
+              times
+            </p>
+            <button
+              onClick={() => {
+                return setCount(count + 1);
+              }}
+              type="button"
+            >
+              Click Me
+            </button>
           </div>
         </div>
+      </div>
+
+      <div id="section2">
         <div className="aboutMe">
           <h1 id="title1">About Me</h1>
           <p id="deskripsi1">
@@ -22,6 +44,11 @@ const Home = () => {
             kreatif, inovatif, dan selalu penuh dengan ide. Saya juga memiliki
             semangat dan motivasi untuk belajar suatu hal yang baru.
           </p>
+          <br />
+          <br />
+          <BrowserRouter>
+            <Contact />
+          </BrowserRouter>
         </div>
       </div>
     </>

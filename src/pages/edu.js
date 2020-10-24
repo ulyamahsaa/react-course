@@ -14,23 +14,23 @@ const Edu = () => {
   ];
 
   return (
-    <>
-      <div className="content">
-        {listEdu.map((pic) => {
-          return (
-            <div className="edu-content">
-              <div className="pageEdu-img">
-                <img src={pic.gambar} width="700" height="450" alt={pic.id} />
-              </div>
-            </div>
-          );
-        })}
-        <div className="eduText">
-          <h1>S1 Informatika, Universitas Telkom</h1>
-          <p>(2014 - 2017)</p>
-        </div>
+    <div className="edu-content">
+      {listEdu.map((pic) => {
+        return (
+          // <div className="edu-content">
+          <img id="eduPic" src={pic.gambar} alt={pic.id} />
+          // </div>
+        );
+      })}
+      <div className="eduText">
+        <h2>S1 Informatika, Universitas Telkom</h2>
+        <p>(2014 - 2017)</p>
+        <h4>
+          Saya sedang menempuh pendidikan Informatika di Universitas Telkom
+          Bandung, jurusan tersebut befokus pada bidang Informatika.
+        </h4>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -17,7 +17,7 @@ const Header = () => {
         );
       })}
       <div id="brand-name">
-        <h1>Anandiwa</h1>
+        <h2>Anandiwa</h2>
       </div>
       {listName2.map((name) => {
         return (

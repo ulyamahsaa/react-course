@@ -29,26 +29,18 @@ const Exp = () => {
   ];
   return (
     <>
-      <div className="content">
+      <div className="content-exp">
         <div className="cardExp">
-          <h1>MY EXPERIENCE</h1>
+          <h2>MY EXPERIENCE</h2>
           <div className="garisExp" />
           {listExp.map((name) => {
             return (
               <div className="expContent">
                 <ul>
-                  <h2>
-                    {' '}
-                    {name.title}
-                    {' '}
-                  </h2>
+                  <h4>{name.title}</h4>
                 </ul>
                 <ul>
-                  <p>
-                    {' '}
-                    {name.year}
-                    {' '}
-                  </p>
+                  <p>{name.year}</p>
                 </ul>
                 <p>
                   <li>{name.content1}</li>
@@ -58,6 +50,7 @@ const Exp = () => {
               </div>
             );
           })}
+          <br />
         </div>
       </div>
     </>
