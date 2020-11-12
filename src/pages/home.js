@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Contact from './contact';
+// import Layout from './layout';
+// import ThemeContext, { themes } from './theme-context';
 
 const Home = () => {
   const [count, setCount] = useState(0);
+  // const [theme, setTheme] = useState(themes.dark);
 
+  // const toggleTheme =
+  //   theme === themes.dark ? setTheme(themes.light) : setTheme(themes.dark);
   return (
     <>
       <div id="section1">
@@ -47,6 +52,12 @@ const Home = () => {
           <br />
           <br />
           <BrowserRouter>
+            {/* <ThemeContext.Provider value={themes.dark}>
+              <button onClick={toggleTheme} type="button">
+                Change Theme
+              </button>
+              <Layout />
+            </ThemeContext.Provider> */}
             <Contact />
           </BrowserRouter>
         </div>
