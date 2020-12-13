@@ -1,6 +1,6 @@
 import {
   Home,
-  Profile,
+  ListProduct,
   Contact,
   Login,
   ProfileId,
@@ -15,8 +15,8 @@ const routes = [
     isPublic: false,
   },
   {
-    path: '/profile',
-    component: Profile,
+    path: '/product',
+    component: ListProduct,
     isPublic: false,
   },
   {

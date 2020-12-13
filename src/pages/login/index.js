@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { setCookie } from '../../utils/cookie';
 import { authService } from '../../services';
+import './login.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -13,14 +14,15 @@ const Login = () => {
     authService
       .login(username, password)
       .then((res) => {
-        const cookieToken = res.data.token;
-        const cookieUser = res.data.user;
-        setCookie('userData', JSON.stringify(cookieUser), 10000);
+        const cookieToken = res.token;
+        // const cookieUser = res.data.user;
+        // setCookie('userData', JSON.stringify(cookieUser), 10000);
         setCookie('token', JSON.stringify(cookieToken), 10000);
+        window.location.replace('/product');
       })
-      .catch((err) => {
-        console.log(err);
-      })
+      // .catch((err) => {
+      //   console.log(err);
+      // })
       .finally(() => {
         setLoginLoading(false);
       });
@@ -46,6 +48,7 @@ const Login = () => {
             }}
           />
         </label>
+        <br />
         <label htmlFor="password">
           Password :
           <input
@@ -56,6 +59,7 @@ const Login = () => {
             }}
           />
         </label>
+        <br />
         <input type="submit" value="Submit" disabled={isLoginLoading} />
       </form>
     </div>
